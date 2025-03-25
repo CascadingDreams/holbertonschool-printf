@@ -16,3 +16,12 @@ int _printstring(char *str)
 	}
 	return (count);
 }
+
+int _formatstring(char *str,int count)
+{
+	if (str == NULL)
+	{
+		str = "(null)";
+	}
+	return (count + _printstring(str));
+}

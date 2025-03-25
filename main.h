@@ -8,5 +8,6 @@
 int _printf(const char *format, ...);
 int _putchar(char c);
 int _printstring(char *str);
+int _formatstring(char *str, int count);
 
 #endif

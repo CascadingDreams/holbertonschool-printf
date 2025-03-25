@@ -13,39 +13,24 @@ int _printf(const char *format, ...)
 	char *str = "";
 
 	if (format == NULL)
-	{
 		return (-1);
-	}
-
 	va_start(args, format);
-
 	while (*format != '\0')
 	{
 		if (*format == '%')
 		{
 			format++;
 			if (!*format)
-			{
-				return ( -1);
-			}	
+				return (-1);
 			else if (*format == 'c')
-			{
 				count = count + _putchar(va_arg(args, int));
-			}
-
 			else if (*format == 's')
 			{
 				str = va_arg(args, char*);
-				if (str == NULL)
-				{
-					str = "(null)";
-				}
-				count = count + _printstring(str);
+				count = _formatstring(str, count);
 			}
-			else if(*format == '%')
-			{
+			else if (*format == '%')
 				count = count + _putchar(*format);
-			}
 			else
 			{
 				_putchar('%');
@@ -62,5 +47,4 @@ int _printf(const char *format, ...)
 	}
 	va_end(args);
 	return (count);
-
 }
