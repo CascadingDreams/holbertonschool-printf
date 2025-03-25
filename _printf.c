@@ -28,12 +28,12 @@ int _printf(const char *format, ...)
 			{
 				return ( -1);
 			}	
-			if (*format == 'c')
+			else if (*format == 'c')
 			{
 				count = count + _putchar(va_arg(args, int));
 			}
 
-			if (*format == 's')
+			else if (*format == 's')
 			{
 				str = va_arg(args, char*);
 				if (str == NULL)
@@ -42,10 +42,15 @@ int _printf(const char *format, ...)
 				}
 				count = count + _printstring(str);
 			}
-			if (*format == '%')
+			else if(*format == '%')
 			{
 				count = count + _putchar(*format);
 			}
+			else
+			{
+				_putchar('%');
+				_putchar(*format);
+				count = count + 2;
 		}
 		else
 		{
