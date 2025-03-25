@@ -10,6 +10,7 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int count = 0;
+	char *str = "";
 
 	if (format == NULL)
 	{
@@ -30,7 +31,12 @@ int _printf(const char *format, ...)
 
 			if (*format == 's')
 			{
-				count = count + _printstring(va_arg(args, char *));
+				str = va_arg(args, char*);
+				if (str == NULL)
+				{
+					str = "(null)";
+				}
+				count = count + _printstring(str);
 			}
 			if (*format == '%')
 			{
