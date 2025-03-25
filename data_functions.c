@@ -9,7 +9,7 @@ int _printstring(char *str)
 {
 	int count = 0;
 
-	if (str != NULL)
+	if (str == NULL)
 	{
 		return (0);
 	}
