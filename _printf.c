@@ -32,10 +32,8 @@ int _printf(const char *format, ...)
 			{
 				count = count + _printstring(va_arg(args, char *));
 			}
-			else
+			if (*format == '%')
 			{
-			
-				count = count + _putchar('%');
 				count = count + _putchar(*format);
 			}
 		}
