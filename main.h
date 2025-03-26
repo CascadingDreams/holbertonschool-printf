@@ -9,5 +9,6 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 int _printstring(char *str);
 int _formatstring(char *str, int count);
+int handle_format(char format, va_list args, int count);
 
 #endif

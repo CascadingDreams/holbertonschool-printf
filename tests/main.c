@@ -10,32 +10,33 @@ int main(void)
     int neg_num = -9876;
 
     /* Basic string test */
-    len1 = _printf("Custom: %s\n", str);
-    len2 = printf("Standard: %s\n", str);
+    char * test1 = "Custom: %s\n";
+    len1 = _printf(test1, str);
+    len2 = printf(test1, str);
     printf("Lengths: _printf = %d, printf = %d\n\n", len1, len2);
 
     /* Character test */
     len1 = _printf("Custom char: %c\n", c);
-    len2 = printf("Standard char: %c\n", c);
+    len2 = printf("Custom char: %c\n", c);
     printf("Lengths: _printf = %d, printf = %d\n\n", len1, len2);
 
     /* Percent sign test */
     len1 = _printf("Custom percent: %%\n");
-    len2 = printf("Standard percent: %%\n");
+    len2 = printf("Custom percent: %%\n");
     printf("Lengths: _printf = %d, printf = %d\n\n", len1, len2);
 
     /* Integer (%d and %i) tests */
     len1 = _printf("Custom integer: %d\n", num);
-    len2 = printf("Standard integer: %d\n", num);
+    len2 = printf("Custom integer: %d\n", num);
     printf("Lengths: _printf = %d, printf = %d\n\n", len1, len2);
 
     len1 = _printf("Custom integer with %%i: %i\n", num);
-    len2 = printf("Standard integer with %%i: %i\n", num);
+    len2 = printf("Custom integer with %%i: %i\n", num);
     printf("Lengths: _printf = %d, printf = %d\n\n", len1, len2);
 
     /* Negative integer test */
     len1 = _printf("Custom negative integer: %d\n", neg_num);
-    len2 = printf("Standard negative integer: %d\n", neg_num);
+    len2 = printf("Custom negative integer: %d\n", neg_num);
     printf("Lengths: _printf = %d, printf = %d\n\n", len1, len2);
 
     /* Edge cases */
