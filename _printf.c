@@ -1,19 +1,19 @@
 #include "main.h"
 
 /**
- * _printf - custom printf function
- * @format: format string containing directives
+ * _printf - Custom printf function
+ * @format: Format string containing directives
  *
- * Return: Number of chars printed
+ * Return: Number of characters printed
  */
 int _printf(const char *format, ...)
 {
 	va_list args;
 	int count = 0;
-	char *str = "";
 
 	if (format == NULL)
 		return (-1);
+
 	va_start(args, format);
 	while (*format != '\0')
 	{
@@ -22,21 +22,7 @@ int _printf(const char *format, ...)
 			format++;
 			if (!*format)
 				return (-1);
-			else if (*format == 'c')
-				count = count + _putchar(va_arg(args, int));
-			else if (*format == 's')
-			{
-				str = va_arg(args, char*);
-				count = _formatstring(str, count);
-			}
-			else if (*format == '%')
-				count = count + _putchar(*format);
-			else
-			{
-				_putchar('%');
-				_putchar(*format);
-				count = count + 2;
-			}
+			count = handle_format(*format, args, count);
 		}
 		else
 		{

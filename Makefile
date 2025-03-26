@@ -5,7 +5,7 @@ CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format
 
 # Source files (update this list based on your existing files)
-SRC = _printf.c data_functions.c
+SRC = _printf.c data_functions.c handle_format.c
 
 EXEC = _printf_test
 
