@@ -26,6 +26,10 @@ int handle_format(char format, va_list args, int count)
 	{
 		count = count + _putchar('%');
 	}
+	else if (format == 'd' || format == 'i')
+	{
+		count = count + _printnumber(va_arg(args, int));
+	}
 	else
 	{
 		_putchar('%');
