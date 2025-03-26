@@ -1,2 +1,5 @@
 **/*.swp
-test.c
+Makefile
+a.out
+**/*.o
+_printf_test
