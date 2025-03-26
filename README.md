@@ -22,6 +22,44 @@
 - Includes a header file `main.h` with function prototypes.
 - Uses `write`, `malloc`, `free`, and variadic functions (`va_list`, `va_start`, `va_end`, `va_copy`, `va_arg`).
 
+## Makefile Usage
+
+The Makefile provides easy commands to build, test, and manage your project.
+
+## Available Make Commands
+
+### Build and Test
+```bash
+make test
+```
+Performs the following actions:
+- Compiles all source files
+- Compiles test files
+- Creates the executable
+- Runs the test executable immediately
+
+### Clean Project
+```bash
+make clean
+```
+Cleans up the project directory by:
+- Removing all compiled object files
+- Deleting the executable
+- Helping maintain a clean project structure
+
+## Example Workflow
+
+```bash
+# Compile and run tests
+make test
+
+# Clean previous builds
+make clean
+
+# Rebuild the project
+make test
+```
+
 ## Repository Structure
 The repository is organized as follows:
 - **`main.h`**: Header file with function prototypes.
