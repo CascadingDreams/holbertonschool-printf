@@ -1,5 +1,4 @@
 **/*.swp
-Makefile
 a.out
 **/*.o
 _printf_test
