@@ -67,7 +67,7 @@ int _printnumber(int n)
 	if (n == INT_MIN)
 	{
 		write(1, "-2147483648", 11);
-		return (1);
+		return (11);
 	}
 	if (n < 0)
 	{
