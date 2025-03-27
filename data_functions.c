@@ -44,3 +44,53 @@ int _formatstring(char *str, int count)
 	}
 	return (count + _printstring(str));
 }
+
+
+
+/**
+ * _printnumber - prints a number digit by digit
+ * @n: number to print
+ * Return: number of characters printed
+ */
+
+int _printnumber(int n)
+{
+	int count = 0;
+	int digit_count = 0;
+	int temp, digit, i, j;
+
+	/* Handle zero immediately */
+	if (n == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
+	/* Handle negative numbers */
+	if (n < 0)
+	{
+		_putchar('-');
+		count++;
+		n = -n;
+	}
+
+	temp = n;
+	/* Count digits */
+	while (temp >= 1)
+	{
+		temp /= 10;
+		digit_count++;
+	}
+
+	count += digit_count;
+	/* Print digits from first to last */
+	for (i = digit_count; i > 0; i--)
+	{
+		temp = n;
+		/* Get the current digit */
+		for (j = 1; j < i; j++)
+			temp /= 10;
+		digit = temp % 10;
+		_putchar(digit + '0');
+	}
+	return (count);
+}
