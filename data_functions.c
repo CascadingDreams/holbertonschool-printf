@@ -58,33 +58,24 @@ int _printnumber(int n)
 	int count = 0;
 	int digit_count = 0;
 	int temp, digit, i, j;
-	char *int_min;
 
-	/* Handle zero immediately */
 	if (n == 0)
 	{
 		_putchar('0');
 		return (1);
 	}
-	
-	int_min = "-2147483648"; 
-
-	if (n == *int_min)
+	if (n == INT_MIN)
 	{
-		_putchar(*int_min);
+		write(1, "-2147483648", 11);
 		return (1);
 	}
-
-	/* Handle negative numbers */
 	if (n < 0)
 	{
 		_putchar('-');
 		count++;
 		n = -n;
 	}
-
 	temp = n;
-	/* Count digits */
 	while (temp >= 1)
 	{
 		temp /= 10;
@@ -92,11 +83,9 @@ int _printnumber(int n)
 	}
 
 	count += digit_count;
-	/* Print digits from first to last */
 	for (i = digit_count; i > 0; i--)
 	{
 		temp = n;
-		/* Get the current digit */
 		for (j = 1; j < i; j++)
 			temp /= 10;
 		digit = temp % 10;
