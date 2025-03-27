@@ -58,6 +58,7 @@ int _printnumber(int n)
 	int count = 0;
 	int digit_count = 0;
 	int temp, digit, i, j;
+	char *int_min;
 
 	/* Handle zero immediately */
 	if (n == 0)
@@ -65,6 +66,15 @@ int _printnumber(int n)
 		_putchar('0');
 		return (1);
 	}
+	
+	int_min = "-2147483648"; 
+
+	if (n == *int_min)
+	{
+		_putchar(*int_min);
+		return (1);
+	}
+
 	/* Handle negative numbers */
 	if (n < 0)
 	{
