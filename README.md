@@ -12,16 +12,6 @@
 - Does not handle flag characters, field width, precision, or length modifiers.
 - Outputs to `stdout`.
 
-## Project Requirements
-- Written in C.
-- Compiled on Ubuntu 20.04 LTS using `gcc` with flags: `-Wall -Werror -Wextra -pedantic -std=gnu89`.
-- Follows the Betty coding style.
-- No use of global variables.
-- Maximum of 5 functions per file.
-- Includes a `README.md` and a man page.
-- Includes a header file `main.h` with function prototypes.
-- Uses `write`, `malloc`, `free`, and variadic functions (`va_list`, `va_start`, `va_end`, `va_copy`, `va_arg`).
-
 ## Makefile Usage
 
 The Makefile provides easy commands to build, test, and manage your project.
@@ -65,6 +55,7 @@ The repository is organized as follows:
 - **`main.h`**: Header file with function prototypes.
 - **`_printf.c`**: Core implementation of the `_printf` function.
 - **`data_functions.c`**: Helper functions used by `_printf`.
+- **`handle_format.c`**: Handles function modifiers for `_printf`.
 - **`tests/`**: Directory containing test cases for validating the implementation.
 - **`man_printf`**: Man page documentation for `_printf`.
 - **`README.md`**: Project documentation.
