@@ -15,7 +15,7 @@ A custom implementation of the standard C library function printf. It replicates
 Handles the following conversion specifiers: 
 .Bl -tag -width -indent  \" Begins a tagged list
 .It %c 
-Prints a single characterz
+Prints a single characters
 .It %s
 Prints a string
 .It %d
