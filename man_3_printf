@@ -2,8 +2,7 @@
 .Dt _printf
 .Os Darwin
 .Sh NAME
-.Nm _printf,
-.Nm printf(),
+.Nm _printf
 .Sh SYNOPSIS
 .Nm
 .Ar format
