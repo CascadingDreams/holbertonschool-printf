@@ -25,5 +25,26 @@ int main(void)
     len2 = printf("Percent:[%%]\n");
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
+    _printf("%d\n", INT_MAX);
+    printf("%d\n", INT_MAX);
+    _printf("%d\n", INT_MIN);
+    printf("%d\n", INT_MIN);
+    _printf("I am %d %s\n", 21, "year's old");
+    printf("I am %d %s\n", 21, "year's old");
+     _printf("Hello %c\n", NULL);
+    printf("Hello %c\n", NULL);
+    _printf("%d\n", 999999999);
+    printf("%d\n", 999999999);
+    _printf("%d\n", 00042);
+    printf("%d\n", 00042);
+    _printf("%d\n", 'A'); 
+    printf("%d\n", 'A');
+    _printf("100%% complete\n");
+    printf("100%% complete\n");
+    _printf("%s\n", NULL);
+    _printf("%s\n", "This is a very long string to test performance and ensure it prints correctly.");
+    printf("%s\n", "This is a very long string to test performance and ensure it prints correctly.");
+    _printf("%d");
+    printf("%d");
     return (0);
 }

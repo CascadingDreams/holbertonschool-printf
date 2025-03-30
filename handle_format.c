@@ -20,7 +20,7 @@ int handle_format(char format, va_list args, int count)
 	else if (format == 's')
 	{
 		str = va_arg(args, char *);
-		count = _formatstring(str, count);
+		count = count + _printstring(str);
 	}
 	else if (format == '%')
 	{
