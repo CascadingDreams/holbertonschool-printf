@@ -21,6 +21,9 @@ int _printstring(char *str)
 {
 	int count = 0;
 
+	if (str == NULL)
+		return (_printstring("(null)"));
+
 	while (str[count] != '\0')
 	{
 		_putchar(str[count]);
@@ -28,24 +31,6 @@ int _printstring(char *str)
 	}
 	return (count);
 }
-
-/**
- * _formatstring - formats string for printf
- * @str: the string input
- * @count: count of string
- *
- * Return: _printstring func
- */
-int _formatstring(char *str, int count)
-{
-	if (str == NULL)
-	{
-		str = "(null)";
-	}
-	return (count + _printstring(str));
-}
-
-
 
 /**
  * _printnumber - prints a number digit by digit
